@@ -5,7 +5,9 @@ Import statements:
 '''
 ### WRITE IMPORT STATEMENTS HERE
 import json
-from employee import details,age,employee_name,title
+from employee import details, age, employee_name, title
+
+
 def create_dict(name, age, title):
     """ Creates a dictionary that stores an employee's information
 
@@ -24,8 +26,9 @@ def create_dict(name, age, title):
                title - string)
     """
     ### WRITE SOLUTION HERE
-    return {"first_name":str(name),"age":int(age),"title":str(title)}
+    return {"first_name": str(name), "age": int(age), "title": str(title)}
     raise NotImplementedError()
+
 
 def write_json_to_file(json_obj, output_file):
     """ Write json string to file
@@ -39,12 +42,13 @@ def write_json_to_file(json_obj, output_file):
         output_file: the file the json is being written to
     """
     ### WRITE SOLUTION HERE
-    
-    newfile = open(output_file,'w')
+
+    newfile = open(output_file, 'w')
     newfile.write(json_obj)
     newfile.close()
     return newfile
     raise NotImplementedError()
+
 
 def main():
     # Print the contents of details() -- This should print the details of an employee
@@ -66,6 +70,7 @@ def main():
 
     # Write out the json object to file
     write_json_to_file(json_object, "employee.json")
+
 
 if __name__ == "__main__":
     main()
